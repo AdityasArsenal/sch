@@ -175,11 +175,9 @@ export default function SchoolWebsite() {
         </div>
 
         <Image
-          src="/assets/school/SCHOOL.png"
+          src="/ss.png"
           alt="Jnanayogi International English Medium School building"
           fill
-          className="object-cover -z-10 rounded-md"
-          priority
         />
         <div className="absolute inset-0 bg-neutral-base/30 rounded-md"></div> {/* Reduced opacity from /60 to /30 */}
 
