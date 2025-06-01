@@ -1,0 +1,328 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-accent: #7e57c2;
+  --secondary-accent: #1abc9c;
+  --tertiary-accent: #ff7043;
+  --quaternary-accent: #3d5afe;
+  --neutral-base: #101010;
+  --neutral-secondary: #1f1f1f;
+  --neutral-tertiary: #2d2d2d;
+  --text-light: #f5f5f5;
+  --text-soft: #eceff1;
+  --premium-gold: #ffd700;
+  --premium-silver: #c0c0c0;
+}
+
+body {
+  background-color: var(--neutral-base);
+  color: var(--text-light);
+  font-family: "Poppins", sans-serif;
+}
+
+.glassmorphic {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glassmorphic:hover {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.premium-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    var(--primary-accent),
+    var(--secondary-accent),
+    var(--tertiary-accent),
+    var(--quaternary-accent)
+  );
+  z-index: -1;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.premium-card:hover::before {
+  opacity: 0.8;
+}
+
+.cta-button {
+  background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.cta-button:hover::after {
+  transform: translateX(100%);
+  transition: transform 0.8s ease;
+}
+
+.staff-card img {
+  transition: transform 0.3s ease;
+}
+
+.staff-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Loading Screen Styles */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--neutral-base) 0%, var(--neutral-secondary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.glossy-logo {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 2rem 3rem;
+  margin-bottom: 2rem;
+  animation: glossyPulse 2s ease-in-out infinite;
+}
+
+.loading-bar {
+  width: 300px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.loading-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent), var(--tertiary-accent));
+  border-radius: 2px;
+  animation: loadingProgress 2.5s ease-in-out;
+}
+
+@keyframes glossyPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(126, 87, 194, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(126, 87, 194, 0.5);
+  }
+}
+
+@keyframes loadingProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Floating Shapes */
+.floating-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  background: linear-gradient(45deg, var(--primary-accent), var(--secondary-accent));
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 80px;
+  height: 80px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.shape-2 {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.shape-3 {
+  width: 60px;
+  height: 60px;
+  bottom: 30%;
+  left: 20%;
+  animation-delay: 4s;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.shape-4 {
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  right: 30%;
+  animation-delay: 1s;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-20px) rotate(120deg);
+  }
+  66% {
+    transform: translateY(20px) rotate(240deg);
+  }
+}
+
+/* Hover blur effect */
+.hover-blur {
+  transition: all 0.3s ease;
+}
+
+.hover-blur:hover {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Premium text effect */
+.premium-text {
+  background: linear-gradient(90deg, var(--text-light), var(--premium-gold), var(--text-light));
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Custom color classes */
+.bg-neutral-base {
+  background-color: var(--neutral-base);
+}
+
+.bg-neutral-secondary {
+  background-color: var(--neutral-secondary);
+}
+
+.bg-neutral-tertiary {
+  background-color: var(--neutral-tertiary);
+}
+
+.text-primary-accent {
+  color: var(--primary-accent);
+}
+
+.text-secondary-accent {
+  color: var(--secondary-accent);
+}
+
+.text-tertiary-accent {
+  color: var(--tertiary-accent);
+}
+
+.text-quaternary-accent {
+  color: var(--quaternary-accent);
+}
+
+.text-text-light {
+  color: var(--text-light);
+}
+
+.text-text-soft {
+  color: var(--text-soft);
+}
+
+.border-primary-accent {
+  border-color: var(--primary-accent);
+}
+
+.border-secondary-accent {
+  border-color: var(--secondary-accent);
+}
+
+.border-tertiary-accent {
+  border-color: var(--tertiary-accent);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}

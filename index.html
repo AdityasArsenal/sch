@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jyanayogi International School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F5F5;
+        }
+
+        .premium-shadow {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .premium-button {
+            background: linear-gradient(to right, #D4A373, #E6C4A1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .premium-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 163, 115, 0.3);
+        }
+
+        /* Smooth scrolling for mobile */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F5F5F5] text-gray-800">
+    <!-- Header -->
+    <header class="bg-[#D4A373] text-white premium-shadow">
+        <div class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="flex flex-col items-center sm:items-start">
+                <!-- Logo placeholder -->
+                <img src="https://i.imgur.com/0y0y0y0.png" alt="Jyanayogi International School Logo"
+                    class="h-12 mb-2 hidden" />
+                <span class="text-xs font-semibold uppercase tracking-wider">SAMARPANA FOUNDATION'S</span>
+                <h1 class="text-xl sm:text-2xl font-bold leading-tight">DYANAYOGI INTERNATIONAL AND PUBLIC
+                    SCHOOL.INCHAGERI.</h1>
+                <span class="text-sm italic">Nurturing Global Citizens</span>
+            </div>
+            <nav class="mt-4 sm:mt-0">
+                <ul class="flex flex-wrap space-x-2 sm:space-x-6 text-sm sm:text-base">
+                    <li><a href="#home" class="hover:text-[#E6C4A1] transition-colors">Home</a></li>
+                    <li><a href="#about" class="hover:text-[#E6C4A1] transition-colors">About Us</a></li>
+                    <li><a href="#admissions" class="hover:text-[#E6C4A1] transition-colors">Admissions</a></li>
+                    <li><a href="#academics" class="hover:text-[#E6C4A1] transition-colors">Academics</a></li>
+                    <li><a href="#faculty" class="hover:text-[#E6C4A1] transition-colors">Faculty</a></li>
+                    <li><a href="#contact" class="hover:text-[#E6C4A1] transition-colors">Contact</a></li>
+                    <li><a href="#events" class="hover:text-[#E6C4A1] transition-colors">Events</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Background Image -->
+    <section id="home" class="relative bg-cover bg-center py-20 rounded-b-3xl premium-shadow"
+        style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+        <div class="absolute inset-0 bg-[#D4A373]/50"></div> <!-- Overlay for readability -->
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Welcome to Jyanayogi International School</h2>
+            <p class="text-base sm:text-lg text-white mb-6">A place where young minds are nurtured with holistic
+                education and 21st-century skills.</p>
+            <a href="#admissions" class="premium-button text-white px-6 py-3 rounded-full font-semibold">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 space-y-10">
+        <section id="about" class="bg-white p-6 rounded-2xl premium-shadow">
+            <h2 class="text-2xl sm:text-3xl font-bold text-[#D4A373] mb-4">About Us</h2>
+            <p class="text-gray-600 text-sm sm:text-base">Jyanayogi International School is committed to providing a
+                world-class education that fosters experiential learning and prepares students to be global citizens.
+            </p>
+        </section>
+        <section id="admissions" class="bg-white p-6 rounded-2xl premium-shadow">
+            <h2 class="text-2xl sm:text-3xl font-bold text-[#D4A373] mb-4">Admissions</h2>
+            <p class="text-gray-600 text-sm sm:text-base mb-4">Learn about our application process, tuition fees, and
+                financial aid options. Contact us for more details or to download our brochure.</p>
+            <a href="#contact" class="premium-button text-white px-5 py-2 rounded-full font-semibold">Apply Now</a>
+        </section>
+        <section id="academics" class="bg-white p-6 rounded-2xl premium-shadow">
+            <h2 class="text-2xl sm:text-3xl font-bold text-[#D4A373] mb-4">Academics</h2>
+            <h3 class="text-lg font-semibold text-[#D4A373] mt-2 mb-1">Pre-Nursery: Laying the Foundation</h3>
+            <ul class="list-disc list-inside text-gray-600 text-sm sm:text-base mb-4">
+                <li>Play-based learning for holistic development.</li>
+                <li>Focus on early language and numeracy skills.</li>
+                <li>Development of fine and gross motor skills.</li>
+                <li>Nurturing social and emotional growth.</li>
+                <li>Stimulating cognitive development through engaging activities.</li>
+            </ul>
+            <h3 class="text-lg font-semibold text-[#D4A373] mt-2 mb-1">Middle School: Building Deeper Understanding</h3>
+            <ul class="list-disc list-inside text-gray-600 text-sm sm:text-base">
+                <li>Comprehensive learning in core subjects (English, Math, Science, Social Studies).</li>
+                <li>Emphasis on critical thinking and problem-solving.</li>
+                <li>Development of strong communication and collaboration skills.</li>
+                <li>Diverse learning experiences through varied teaching methods.</li>
+                <li>Fostering independence and academic responsibility.</li>
+            </ul>
+        </section>
+        <section id="faculty" class="bg-white p-6 rounded-2xl premium-shadow">
+            <h2 class="text-2xl sm:text-3xl font-bold text-[#D4A373] mb-4">Faculty</h2>
+            <p class="text-gray-600 text-sm sm:text-base">At JYANAYOGI, we pride ourselves on providing an
+                all-encompassing curriculum designed to nurture every facet of a child's development. Beyond academic
+                excellence, we foster creativity, critical thinking, and social-emotional growth through a wide array of
+                enriching activities and subjects. Our dedicated team of passionate educators goes above and beyond to
+                create a supportive and engaging learning environment, tailoring their approach to meet the unique needs
+                of each student. Together, we strive to empower our students to become well-rounded individuals,
+                equipped with the knowledge, skills, and character to thrive in an ever-evolving world.</p>
+        </section>
+        <section id="contact" class="bg-white p-6 rounded-2xl premium-shadow">
+            <h2 class="text-2xl sm:text-3xl font-bold text-[#D4A373] mb-4">Contact</h2>
+            <div class="text-gray-600 text-sm sm:text-base space-y-1">
+                <div><span class="font-semibold">Location:</span> Jyanayogi International and Public School, near KEB,
+                    Chadchan Road, Inchgeri, Dt. Vijayapura</div>
+                <div><span class="font-semibold">Mobile:</span> 6361553488, 9845870400</div>
+                <div><span class="font-semibold">Email:</span> samarpanafoundation2018@gmail.com</div>
+            </div>
+        </section>
+        <section id="events" class="bg-white p-6 rounded-2xl premium-shadow">
+            <h2 class="text-2xl sm:text-3xl font-bold text-[#D4A373] mb-4">Events</h2>
+            <p class="text-gray-600 text-sm sm:text-base">Upcoming events at Jyanayogi International School...</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#D4A373] text-white py-6 rounded-t-3xl premium-shadow">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm sm:text-base">© 2023 Jyanayogi International School. All rights reserved.</p>
+            <p class="text-xs mt-1">Contact: info@jyanayogi.org | Phone: (123) 456-7890</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
